@@ -1,5 +1,6 @@
 import socket
 
+
 tcp_port = 26100
 tcp_ip = '192.168.1.194'
 buf_size = 30

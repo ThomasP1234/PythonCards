@@ -1,5 +1,4 @@
 import socket
-import thread
 
 tcp_port = 26100
 tcp_ip = '0.0.0.0'
