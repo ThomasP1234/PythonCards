@@ -168,31 +168,45 @@ class Server():
         self.endSocket(s)
         
         if len(self.deck) == 0:
-            self.deck, self.discardDeck = self.discardDeck[:-1], self.discardDeck[-1:]
+            self.deck, self.discardDeck = self.discardDeck[:-1], [].append(self.discardDeck[-1])
 
         print(self.deck)
         print(self.discardDeck)
 
         for player in self.players:
-            for player in self.players:
-                tcpIp = player[0]
-                tcpPort = player[1]
-                buffSize = 30
+            tcpIp = player[0]
+            tcpPort = player[1]
+            buffSize = 30
 
-                s = self.createSocket()
+            s = self.createSocket()
 
-                print("[INFO] Connecting Socket to port",tcpPort)
-                s.connect((tcpIp, tcpPort))
-                print("[INFO] Socket connected successfully to port", tcpPort)
+            print("[INFO] Connecting Socket to port",tcpPort)
+            s.connect((tcpIp, tcpPort))
+            print("[INFO] Socket connected successfully to port", tcpPort)
 
-                msg = self.discardDeck[-1]
-                self.sendToClient(s, msg, buffSize)
+            msg = self.discardDeck[-1]
+            self.sendToClient(s, msg, buffSize)
 
-                self.endSocket(s)
+            self.endSocket(s)
         
         print(self.players)
-        self.players = self.players[1:].append(self.players[0])
+        self.players.append(self.players.pop(0))
         print(self.players)
+
+        tcpIp = self.players[0][0]
+        tcpPort = self.players[0][1]
+        buffSize = 30
+
+        s = self.createSocket()
+
+        print("[INFO] Connecting Socket to port",tcpPort)
+        s.connect((tcpIp, tcpPort))
+        print("[INFO] Socket connected successfully to port", tcpPort)
+
+        msg = "go"
+        self.sendToClient(s, msg, buffSize)
+
+        self.endSocket(s)
 
     def run(self):
         self.handshakeClients()
