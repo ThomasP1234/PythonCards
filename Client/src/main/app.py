@@ -48,7 +48,7 @@ class App():
             self.logger.critical("Recived {data}")
             raise IOError
         else:
-            print("[INFO] Data sent successfully to server")
+            self.logger.info("Data sent successfully to server")
 
     def reciveFromServer(self, c, buffSize, isRecive=True):
         self.logger.info("Receiving data from server")
@@ -133,6 +133,7 @@ class App():
         else:
             myGo=False
 
+        exit = False
         while goAgain:
             while not myGo:
                 c,addr = s.accept()
@@ -143,11 +144,16 @@ class App():
                 self.logger.info("Disconnecting client connection")
                 c.close()
 
-                if data != "go":
+                if data == "go":
+                    myGo = True
+                elif data == "exit":
+                    exit = True
+                    break
+                else:
                     pass
                     # self.updateDiscard(data)
-                else:
-                    myGo = True
+
+            if exit: break
 
             c,addr = s.accept()
             self.logger.info(f"Connection address: {addr}")

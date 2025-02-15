@@ -146,8 +146,8 @@ class Server():
             self.endSocket(s)
 
     def turn(self):
-        print(self.deck)
-        print(self.discardDeck)
+        self.logger.debug(f"Main Deck: {self.deck}")
+        self.logger.debug(f"Discard Deck: {self.discardDeck}")
         tcpIp = self.players[0][0]
         tcpPort = self.players[0][1]
         buffSize = 30
@@ -178,6 +178,21 @@ class Server():
 
         data = self.reciveFromClient(s, buffSize)
         if data == "y":
+            for player in self.players:
+                tcpIp = player[0]
+                tcpPort = player[1]
+                buffSize = 30
+
+                s = self.createSocket()
+
+                self.logger.info(f"Connecting socket to port")
+                s.connect((tcpIp, tcpPort))
+                self.logger.info(f"Socket connected successfully: {tcpIp}:{tcpPort}")
+
+                msg = "exit"
+                self.sendToClient(s, msg, buffSize)
+
+                self.endSocket(s)
             return True
         
         self.endSocket(s)
