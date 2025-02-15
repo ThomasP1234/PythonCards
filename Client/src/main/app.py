@@ -12,14 +12,6 @@ print("[INFO] Connecting Socket to port",tcp_port)
 s.connect((tcp_ip,tcp_port))
 print("[INFO] Socket connected successfully to port",tcp_port)
 
-msg = "Hello Cruel World"
-print("[INFO] Encoding data...")
-msg = msg.encode('utf-8')
-
-print("[INFO] Sending data to Server...")
-s.send(msg)
-print("[INFO] Data sent successfully to Server")
-
 print("[INFO] Receiving Data from server")
 data = s.recv(buf_size)
 
