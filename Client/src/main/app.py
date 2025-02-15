@@ -55,7 +55,7 @@ class App():
 
         return data
 
-    def initConnect(self):
+    def handshakeServer(self):
         tcpIp = '192.168.1.194'
         tcpPort = 26100
         buffSize = 30
@@ -74,12 +74,10 @@ class App():
             msg = input("Enter the number of players ")
             self.sendToServer(s, msg, buffSize)
 
-        print("[INFO] Disconnecting Socket...")
-        s.close()
-        print("[INFO] Socket disconnected successfully")
+        self.endSocket(s)
 
     def getHand(self):
-        hand=[]
+        self.hand=[]
 
         tcpPort = self.port
         tcpIp = '0.0.0.0'
@@ -94,16 +92,71 @@ class App():
         c,addr = s.accept()
         print("[INFO] Connection address from",addr)
 
-        while len(hand) < 7:
+        while len(self.hand) < 7:
             data = self.reciveFromServer(c, buffSize)
 
-            hand.append(data)
+            self.hand.append(data)
 
-        print(hand)
+        print("[INFO] Hand from server is",self.hand)
+
+        print("[INFO] Disconnecting Client connection...")
+        c.close()
+
+        self.endSocket(s)
+
+    def turn(self):
+        goAgain = True
+
+        tcpPort = self.port
+        tcpIp = '0.0.0.0'
+        buffSize = 30
+
+        s = self.createSocket()
+        self.setupSocket(s, tcpIp, tcpPort)
+
+        s.listen(1)
+        print("[INFO] Socket is listening")
+
+        while goAgain:
+            c,addr = s.accept()
+            print("[INFO] Connection address from",addr)
+
+            self.sendToServer(c, input("hidden (h) or upturned (u) "), buffSize)
+
+            print(self.hand)
+            self.hand.append(self.reciveFromServer(c, buffSize))
+            print(self.hand)
+
+            self.sendToServer(c, card:=self.hand[int(input("0-7"))], buffSize)
+            self.hand.pop(card)
+            print(self.hand)
+
+            self.sendToServer(c, input("win? y,n"), buffSize)
+
+            print("[INFO] Disconnecting Client connection...")
+            c.close()
+
+            myGo = False
+
+            while not myGo:
+                c,addr = s.accept()
+                print("[INFO] Connection address from",addr)
+
+                data = self.reciveFromServer(c, buffSize)
+
+                print("[INFO] Disconnecting Client connection...")
+                c.close()
+
+                if data != "go":
+                    pass
+                    # self.updateDiscard(data)
+                else:
+                    myGo = True
 
     def run(self):
-        self.initConnect()
+        self.handshakeServer()
         self.getHand()
+        self.turn()
 
 if __name__ == "__main__":
     application = App()
