@@ -11,6 +11,7 @@ class Server():
         self.logger = logging.getLogger('server')
         self.logger.setLevel(logging.DEBUG)
         self.logger.debug("Init ran sucessfully")
+        self.logger.debug(f"This server is {socket.gethostname()} [{socket.gethostbyname(socket.gethostname())}]")
 
     def createSocket(self):
         self.logger.info("Creating socket")
@@ -92,7 +93,7 @@ class Server():
             self.logger.info(f"Player {playerCounter} has joined")
             self.logger.debug(f"{players}")
 
-            self.logger.info("Disconnecting llient connection")
+            self.logger.info("Disconnecting client connection")
             c.close()
 
             playerCounter += 1
