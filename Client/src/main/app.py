@@ -128,7 +128,7 @@ class App():
             print(self.hand)
 
             self.sendToServer(c, card:=self.hand[int(input("0-7"))], buffSize)
-            self.hand.pop(card)
+            self.hand.remove(card)
             print(self.hand)
 
             self.sendToServer(c, input("win? y,n"), buffSize)
