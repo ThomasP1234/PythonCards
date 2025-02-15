@@ -5,6 +5,7 @@ class App():
         self.init_tcpIp = '0.0.0.0'
         self.init_tcpPort = 26100
         self.init_buffSize = 30
+        self.player1 = False
 
     def createSocket(self):
         print("[INFO] Creating socket...")
@@ -73,6 +74,7 @@ class App():
         if data == "26101":
             msg = input("Enter the number of players ")
             self.sendToServer(s, msg, buffSize)
+            self.player1 = True
 
         self.endSocket(s)
 
@@ -117,7 +119,27 @@ class App():
         s.listen(1)
         print("[INFO] Socket is listening")
 
+        if self.player1:
+            myGo = True
+        else:
+            myGo=False
+
         while goAgain:
+            while not myGo:
+                c,addr = s.accept()
+                print("[INFO] Connection address from",addr)
+
+                data = self.reciveFromServer(c, buffSize)
+
+                print("[INFO] Disconnecting Client connection...")
+                c.close()
+
+                if data != "go":
+                    pass
+                    # self.updateDiscard(data)
+                else:
+                    myGo = True
+
             c,addr = s.accept()
             print("[INFO] Connection address from",addr)
 
@@ -136,22 +158,7 @@ class App():
             print("[INFO] Disconnecting Client connection...")
             c.close()
 
-            myGo = False
-
-            while not myGo:
-                c,addr = s.accept()
-                print("[INFO] Connection address from",addr)
-
-                data = self.reciveFromServer(c, buffSize)
-
-                print("[INFO] Disconnecting Client connection...")
-                c.close()
-
-                if data != "go":
-                    pass
-                    # self.updateDiscard(data)
-                else:
-                    myGo = True
+            myGo=False
 
     def run(self):
         self.handshakeServer()

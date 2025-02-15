@@ -94,7 +94,7 @@ class Server():
         self.deck = self.generateDeck()
         self.discardDeck = []
         self.sendPlayerHand()
-        self.discardDeck=self.deck[0]
+        self.discardDeck.append(self.deck[0])
         self.deck.pop(0)
         won = False
         while not won:
