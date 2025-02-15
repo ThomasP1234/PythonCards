@@ -26,7 +26,7 @@ class App():
         print("[INFO] Encoding data...")
         e_msg = msg.encode('utf-8')
 
-        print("[INFO] Sending data to server...")
+        print(f"[INFO] Sending data to server... {msg}")
         c.send(e_msg)
 
         if isSend:
@@ -98,14 +98,6 @@ class App():
             data = self.reciveFromServer(c, buffSize)
 
             hand.append(data)
-
-            # msg = f"{data}"
-            # print("[INFO] Encoding data...")
-            # msg = msg.encode('utf-8')
-
-            # print("[INFO] Sending data to Client...")
-            # c.send(msg)
-            # print("[INFO] Data sent successfully to Client")
 
         print(hand)
 

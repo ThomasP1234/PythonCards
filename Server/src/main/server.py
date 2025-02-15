@@ -27,7 +27,7 @@ class Server():
         print("[INFO] Encoding data...")
         e_msg = msg.encode('utf-8')
 
-        print("[INFO] Sending data to client...")
+        print(f"[INFO] Sending data to client... {msg}")
         c.send(e_msg)
 
         if isSend:
