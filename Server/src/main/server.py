@@ -1,55 +1,62 @@
 import socket
 import random
+import logging
 
 class Server():
     def __init__(self):
         self.init_tcpIp = '0.0.0.0'
         self.init_tcpPort = 26100
         self.init_buffSize = 30
+        logging.basicConfig(filename="server.log", format='%(asctime)s - %(levelname)s - %(message)s')
+        self.logger = logging.getLogger('server')
+        self.logger.setLevel(logging.DEBUG)
+        self.logger.debug("Init ran sucessfully")
 
     def createSocket(self):
-        print("[INFO] Creating socket...")
+        self.logger.info("Creating socket")
         s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-        print("[INFO] Socket successfully created")
+        self.logger.info("Socket successfully created")
 
         return s
     
     def endSocket(self, s):
-        print("[INFO] Disconnecting Socket...")
+        self.logger.info("Disconnecting socket")
         s.close()
-        print("[INFO] Socket disconnected successfully")
+        self.logger.info("Socket disconnected successfully")
     
     def setupSocket(self, s, tcpIp, tcpPort):
         s.bind((tcpIp,tcpPort))
-        print("[INFO] Socket is binded to port",tcpPort)
+        self.logger.info(f"Socket is binded to: {tcpIp}:{tcpPort}")
 
     def sendToClient(self, c, msg, buffSize, isSend=True):
-        print("[INFO] Encoding data...")
+        self.logger.info("Encoding data")
         e_msg = msg.encode('utf-8')
 
-        print(f"[INFO] Sending data to client... {msg}")
+        self.logger.info("Sending data to client: {msg}")
         c.send(e_msg)
 
         if isSend:
             self.verifySendToClient(c, msg, buffSize)
 
     def verifySendToClient(self, c, msg, buffSize):
-        print("[INFO] Verifying data send to client")
+        self.logger.info("Verifying data send to client")
         data = self.reciveFromClient(c, buffSize, False)
         if data != msg:
-            print("[ERROR] Data recived from client did not match data send")
+            self.logger.critical("Mismatch in data sent back")
+            self.logger.critical("Sent: {msg}")
+            self.logger.critical("Recived {data}")
             raise IOError
         else:
-            print("[INFO] Data sent successfully to client")
+            self.logger.info("Data sent successfully to client")
 
     def reciveFromClient(self, c, buffSize, isRecive=True):
-        print("[INFO] Receiving data from client...")
+        self.logger.info("Receiving data from client")
         data = c.recv(buffSize)
 
-        print("[INFO] Decoding received data...")
+        self.logger.info("Decoding received data")
         data = data.decode('utf-8')
 
-        print("[INFO] Received data from client : ",data)
+        self.logger.info("Received data from client: {data}")
 
         if isRecive:
             self.sendToClient(c, data, buffSize, False)
@@ -57,6 +64,7 @@ class Server():
         return data
 
     def handshakeClients(self):
+        self.logger.debug("Beginning handshake with clients")
         playerCounter = 1
         playerLimit = 10
         players = []
@@ -65,11 +73,11 @@ class Server():
         self.setupSocket(s, self.init_tcpIp, self.init_tcpPort)
 
         s.listen(1)
-        print("[INFO] Socket is listening")
+        self.logger.info("Socket is listening")
 
         while playerCounter<=playerLimit:
             c,addr = s.accept()
-            print("[INFO] Connection address from",addr)
+            self.logger.info(f"Connection address: {addr}")
 
             msg = f"{self.init_tcpPort+playerCounter}"
             self.sendToClient(c, msg, self.init_buffSize)
@@ -81,8 +89,10 @@ class Server():
                 playerLimit = self.numPlayers
 
             players.append((addr[0], self.init_tcpPort+playerCounter))
+            self.logger.info(f"Player {playerCounter} has joined")
+            self.logger.debug(f"{players}")
 
-            print("[INFO] Disconnecting Client connection...")
+            self.logger.info("Disconnecting llient connection")
             c.close()
 
             playerCounter += 1
@@ -91,8 +101,11 @@ class Server():
         self.players = players
 
     def game(self):
+        self.logger.debug("Begining game")
         self.deck = self.generateDeck()
         self.discardDeck = []
+        self.logger.debug(f"Main Deck: {self.deck}")
+        self.logger.debug(f"Discard Deck: {self.discardDeck}")
         self.sendPlayerHand()
         self.discardDeck.append(self.deck[0])
         self.deck.pop(0)
@@ -119,14 +132,15 @@ class Server():
 
             s = self.createSocket()
 
-            print("[INFO] Connecting Socket to port",tcpPort)
+            self.logger.info(f"Connecting socket to port")
             s.connect((tcpIp, tcpPort))
-            print("[INFO] Socket connected successfully to port", tcpPort)
+            self.logger.info(f"Socket connected successfully: {tcpIp}:{tcpPort}")
 
             for i in range(7):
                 msg = self.deck[0]
                 self.deck.pop(0)
                 self.sendToClient(s, msg, buffSize)
+                self.logger.debug(f"Card: {msg}")
 
             self.endSocket(s)
 
@@ -139,9 +153,9 @@ class Server():
 
         s = self.createSocket()
 
-        print("[INFO] Connecting Socket to port",tcpPort)
+        self.logger.info(f"Connecting socket to port")
         s.connect((tcpIp, tcpPort))
-        print("[INFO] Socket connected successfully to port", tcpPort)
+        self.logger.info(f"Socket connected successfully: {tcpIp}:{tcpPort}")
 
         data = self.reciveFromClient(s, buffSize)
 
@@ -152,14 +166,14 @@ class Server():
             self.sendToClient(s, self.deck[0], buffSize)
             self.deck.pop(0)
 
-        print(self.deck)
-        print(self.discardDeck)
+        self.logger.debug(f"Main Deck: {self.deck}")
+        self.logger.debug(f"Discard Deck: {self.discardDeck}")
 
         data = self.reciveFromClient(s, buffSize)
         self.discardDeck.append(data)
 
-        print(self.deck)
-        print(self.discardDeck)
+        self.logger.debug(f"Main Deck: {self.deck}")
+        self.logger.debug(f"Discard Deck: {self.discardDeck}")
 
         data = self.reciveFromClient(s, buffSize)
         if data == "y":
@@ -170,8 +184,8 @@ class Server():
         if len(self.deck) == 0:
             self.deck, self.discardDeck = self.discardDeck[:-1], [].append(self.discardDeck[-1])
 
-        print(self.deck)
-        print(self.discardDeck)
+        self.logger.debug(f"Main Deck: {self.deck}")
+        self.logger.debug(f"Discard Deck: {self.discardDeck}")
 
         for player in self.players:
             tcpIp = player[0]
@@ -180,18 +194,18 @@ class Server():
 
             s = self.createSocket()
 
-            print("[INFO] Connecting Socket to port",tcpPort)
+            self.logger.info(f"Connecting socket to port")
             s.connect((tcpIp, tcpPort))
-            print("[INFO] Socket connected successfully to port", tcpPort)
+            self.logger.info(f"Socket connected successfully: {tcpIp}:{tcpPort}")
 
             msg = self.discardDeck[-1]
             self.sendToClient(s, msg, buffSize)
 
             self.endSocket(s)
         
-        print(self.players)
+        self.logger.debug(f"Players: {self.players}")
         self.players.append(self.players.pop(0))
-        print(self.players)
+        self.logger.debug(f"Players: {self.players}")
 
         tcpIp = self.players[0][0]
         tcpPort = self.players[0][1]
@@ -199,9 +213,9 @@ class Server():
 
         s = self.createSocket()
 
-        print("[INFO] Connecting Socket to port",tcpPort)
+        self.logger.info(f"Connecting socket to port")
         s.connect((tcpIp, tcpPort))
-        print("[INFO] Socket connected successfully to port", tcpPort)
+        self.logger.info(f"Socket connected successfully: {tcpIp}:{tcpPort}")
 
         msg = "go"
         self.sendToClient(s, msg, buffSize)
