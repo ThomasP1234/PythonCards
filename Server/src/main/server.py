@@ -2,59 +2,92 @@ import socket
 import random
 
 class Server():
-    def initConnect(self):
-        tcp_port = 26100
-        tcp_ip = '0.0.0.0'
-        buf_size = 30
+    def __init__(self):
+        self.init_tcpIp = '0.0.0.0'
+        self.init_tcpPort = 26100
+        self.init_buffSize = 30
 
-        x = 1
-        playerLimit = 10
-        players = []
-
-        print("[INFO] Creating Socket...")
+    def createSocket(self):
+        print("[INFO] Creating socket...")
         s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         print("[INFO] Socket successfully created")
 
-        s.bind((tcp_ip,tcp_port))
-        print("[INFO] Socket is binded to port",tcp_port)
+        return s
+    
+    def endSocket(self, s):
+        print("[INFO] Disconnecting Socket...")
+        s.close()
+        print("[INFO] Socket disconnected successfully")
+    
+    def setupSocket(self, s, tcpIp, tcpPort):
+        s.bind((tcpIp,tcpPort))
+        print("[INFO] Socket is binded to port",tcpPort)
+
+    def sendToClient(self, c, msg, buffSize, isSend=True):
+        print("[INFO] Encoding data...")
+        e_msg = msg.encode('utf-8')
+
+        print("[INFO] Sending data to client...")
+        c.send(e_msg)
+
+        if isSend:
+            self.verifySendToClient(c, msg, buffSize)
+
+    def verifySendToClient(self, c, msg, buffSize):
+        print("[INFO] Verifying data send to client")
+        data = self.reciveFromClient(c, buffSize, False)
+        if data != msg:
+            print("[ERROR] Data recived from client did not match data send")
+            raise IOError
+        else:
+            print("[INFO] Data sent successfully to client")
+
+    def reciveFromClient(self, c, buffSize, isRecive=True):
+        print("[INFO] Receiving data from client...")
+        data = c.recv(buffSize)
+
+        print("[INFO] Decoding received data...")
+        data = data.decode('utf-8')
+
+        print("[INFO] Received data from client : ",data)
+
+        if isRecive:
+            self.sendToClient(c, data, buffSize, False)
+
+        return data
+
+    def handshakeClients(self):
+        playerCounter = 1
+        playerLimit = 10
+        players = []
+
+        s = self.createSocket()
+        self.setupSocket(s, self.init_tcpIp, self.init_tcpPort)
 
         s.listen(1)
         print("[INFO] Socket is listening")
 
-        while x<=playerLimit:
+        while playerCounter<=playerLimit:
             c,addr = s.accept()
             print("[INFO] Connection address from",addr)
 
-            msg = f"{tcp_port+x}"
-            print("[INFO] Encoding data...")
-            msg = msg.encode('utf-8')
+            msg = f"{self.init_tcpPort+playerCounter}"
+            self.sendToClient(c, msg, self.init_buffSize)
 
-            print("[INFO] Sending data to Client...")
-            c.send(msg)
-            print("[INFO] Data sent successfully to Client")
-
-            if x == 1:
-                print("[INFO] Receiving Data from Client...")
-                data = c.recv(buf_size)
-
-                print("[INFO] Decoding received data...")
-                data = data.decode('utf-8')
-
-                print("[INFO] Received Data from Client : ",data)
+            if playerCounter == 1:
+                data = self.reciveFromClient(c, self.init_buffSize)
 
                 self.numPlayers = int(data)
                 playerLimit = self.numPlayers
 
-            players.append((addr[0], tcp_port+x))
+            players.append((addr[0], self.init_tcpPort+playerCounter))
 
             print("[INFO] Disconnecting Client connection...")
             c.close()
 
-            x += 1
+            playerCounter += 1
 
-        print("[INFO] Disconnecting Socket...")
-        s.close()
-        print("[INFO] Socket disconnected successfully")
+        self.endSocket(s)
         self.players = players
 
     def game(self):
@@ -74,38 +107,23 @@ class Server():
     
     def sendPlayerHand(self):
         for player in self.players:
-            tcp_ip = player[0]
-            tcp_port = player[1]
-            buf_size = 30
+            tcpIp = player[0]
+            tcpPort = player[1]
+            buffSize = 30
 
-            print("[INFO] Creating Socket...")
-            s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-            print("[INFO] Socket successfully created")
+            s = self.createSocket()
 
-            print("[INFO] Connecting Socket to port",tcp_port)
-            s.connect((tcp_ip,tcp_port))
-            print("[INFO] Socket connected successfully to port",tcp_port)
+            print("[INFO] Connecting Socket to port",tcpPort)
+            s.connect((tcpIp, tcpPort))
+            print("[INFO] Socket connected successfully to port", tcpPort)
 
             for i in range(7):
                 msg = self.deck[0]
                 self.deck.pop(0)
-                print("[INFO] Encoding data...")
-                msg = msg.encode('utf-8')
-
-                print("[INFO] Sending data to Client...")
-                s.send(msg)
-                print("[INFO] Data sent successfully to Client")
-
-                print("[INFO] Receiving Data from server")
-                data = s.recv(buf_size)
-
-                if data == msg:
-                    continue
-                else:
-                    raise Exception
+                self.sendToClient(s, msg, buffSize)
 
     def run(self):
-        self.initConnect()
+        self.handshakeClients()
         self.game()
 
 if __name__ == "__main__":
