@@ -252,3 +252,141 @@
 2025-02-16 10:06:03,656 - INFO - Receiving data from server
 2025-02-16 10:06:03,656 - INFO - Decoding received data
 2025-02-16 10:06:03,656 - INFO - Received data from server: {data}
+2025-02-16 10:36:27,848 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:36:27,852 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:37:06,520 - client - DEBUG - Init ran sucessfully
+2025-02-16 10:37:06,534 - client - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:37:06,535 - client - DEBUG - Beginning handshake with server
+2025-02-16 10:37:06,535 - client - INFO - Creating socket
+2025-02-16 10:37:06,535 - client - INFO - Socket successfully created
+2025-02-16 10:37:06,535 - client - INFO - Connecting socket to port
+2025-02-16 10:37:08,568 - client - CRITICAL - Uh oh, a problem has occured
+2025-02-16 10:37:08,568 - client - CRITICAL - [WinError 10061] No connection could be made because the target machine actively refused it
+2025-02-16 10:38:39,150 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:38:39,150 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:38:39,248 - client:window - INFO - Window Created
+2025-02-16 10:38:39,248 - client:window - INFO - Rows Setup
+2025-02-16 10:38:57,883 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:38:57,883 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:38:57,965 - client:window - INFO - Window Created
+2025-02-16 10:38:57,965 - client:window - INFO - Rows Setup
+2025-02-16 10:39:59,865 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:39:59,865 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:39:59,946 - client:window - INFO - Window Created
+2025-02-16 10:39:59,946 - client:window - INFO - Rows Setup
+2025-02-16 10:40:24,963 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:40:24,980 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:40:25,062 - client:window - INFO - Window Created
+2025-02-16 10:40:25,062 - client:window - INFO - Rows Setup
+2025-02-16 10:41:26,462 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:41:26,462 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:41:26,560 - client:window - INFO - Window Created
+2025-02-16 10:41:26,560 - client:window - INFO - Rows Setup
+2025-02-16 10:41:58,710 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:41:58,726 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:41:58,809 - client:window - INFO - Window Created
+2025-02-16 10:41:58,809 - client:window - INFO - Rows Setup
+2025-02-16 10:42:57,198 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:42:57,198 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:42:57,291 - client:window - INFO - Window Created
+2025-02-16 10:42:57,291 - client:window - INFO - Rows Setup
+2025-02-16 10:43:24,682 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:43:24,682 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:43:24,774 - client:window - INFO - Window Created
+2025-02-16 10:43:24,774 - client:window - INFO - Rows Setup
+2025-02-16 10:43:35,558 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:43:35,558 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:43:35,657 - client:window - INFO - Window Created
+2025-02-16 10:43:35,657 - client:window - INFO - Rows Setup
+2025-02-16 10:43:48,825 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:43:48,825 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:43:48,923 - client:window - INFO - Window Created
+2025-02-16 10:43:48,923 - client:window - INFO - Rows Setup
+2025-02-16 10:46:21,352 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:46:21,352 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:46:21,435 - client:window - INFO - Window Created
+2025-02-16 10:46:21,435 - client:window - INFO - Rows Setup
+2025-02-16 10:49:29,648 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:49:29,648 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:49:29,730 - client:window - INFO - Window Created
+2025-02-16 10:49:29,730 - client:window - INFO - Rows Setup
+2025-02-16 10:51:09,794 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:51:09,794 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:51:09,894 - client:window - INFO - Window Created
+2025-02-16 10:51:09,894 - client:window - INFO - Rows Setup
+2025-02-16 10:51:33,830 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:51:33,830 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:51:33,926 - client:window - INFO - Window Created
+2025-02-16 10:51:33,926 - client:window - INFO - Rows Setup
+2025-02-16 10:53:18,709 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:53:18,724 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:53:18,807 - client:window - INFO - Window Created
+2025-02-16 10:53:18,807 - client:window - INFO - Rows Setup
+2025-02-16 10:53:35,707 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:53:35,707 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:53:35,806 - client:window - INFO - Window Created
+2025-02-16 10:53:35,806 - client:window - INFO - Rows Setup
+2025-02-16 10:53:47,473 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:53:47,473 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:53:47,556 - client:window - INFO - Window Created
+2025-02-16 10:53:47,556 - client:window - INFO - Rows Setup
+2025-02-16 10:53:52,824 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:53:52,824 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:53:52,925 - client:window - INFO - Window Created
+2025-02-16 10:53:52,925 - client:window - INFO - Rows Setup
+2025-02-16 10:54:00,573 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:54:00,573 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:54:00,672 - client:window - INFO - Window Created
+2025-02-16 10:54:00,672 - client:window - INFO - Rows Setup
+2025-02-16 10:55:15,854 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:55:15,854 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:55:15,937 - client:window - INFO - Window Created
+2025-02-16 10:55:15,937 - client:window - INFO - Rows Setup
+2025-02-16 10:58:19,932 - client:window - DEBUG - Init ran sucessfully
+2025-02-16 10:58:19,932 - client:window - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:58:20,015 - client:window - INFO - Window Created
+2025-02-16 10:58:20,015 - client:window - INFO - Rows Setup
+2025-02-16 11:04:30,872 - client - DEBUG - Init ran sucessfully
+2025-02-16 11:04:30,872 - client - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 11:04:30,872 - client - DEBUG - Beginning handshake with server
+2025-02-16 11:04:30,872 - client - INFO - Creating socket
+2025-02-16 11:04:30,872 - client - INFO - Socket successfully created
+2025-02-16 11:04:30,872 - client - INFO - Connecting socket to port
+2025-02-16 11:04:39,197 - client - DEBUG - Init ran sucessfully
+2025-02-16 11:04:39,197 - client - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 11:04:39,197 - client - DEBUG - Beginning handshake with server
+2025-02-16 11:04:39,197 - client - INFO - Creating socket
+2025-02-16 11:04:39,197 - client - INFO - Socket successfully created
+2025-02-16 11:04:39,197 - client - INFO - Connecting socket to port
+2025-02-16 11:04:41,214 - client - CRITICAL - Uh oh, a problem has occured
+2025-02-16 11:04:41,214 - client - CRITICAL - [WinError 10061] No connection could be made because the target machine actively refused it
+2025-02-16 11:05:37,287 - client - DEBUG - Init ran sucessfully
+2025-02-16 11:05:37,303 - client - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 11:05:37,303 - client - DEBUG - Beginning handshake with server
+2025-02-16 11:05:37,303 - client - INFO - Creating socket
+2025-02-16 11:05:37,303 - client - INFO - Socket successfully created
+2025-02-16 11:05:37,303 - client - INFO - Connecting socket to port
+2025-02-16 11:05:37,303 - client - INFO - Socket connected successfully: 192.168.1.194:26100
+2025-02-16 11:05:37,303 - client - INFO - Receiving data from server
+2025-02-16 11:05:37,303 - client - INFO - Decoding received data
+2025-02-16 11:05:37,303 - client - INFO - Received data from server: {data}
+2025-02-16 11:05:37,303 - client - INFO - Encoding data
+2025-02-16 11:05:37,303 - client - INFO - Sending data to server: {msg}
+2025-02-16 11:05:39,758 - client - INFO - Encoding data
+2025-02-16 11:05:39,758 - client - CRITICAL - Uh oh, a problem has occured
+2025-02-16 11:05:39,758 - client - CRITICAL - 'int' object has no attribute 'encode'
+2025-02-16 11:06:31,471 - client - DEBUG - Init ran sucessfully
+2025-02-16 11:06:31,487 - client - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 11:06:31,487 - client - DEBUG - Beginning handshake with server
+2025-02-16 11:06:31,487 - client - INFO - Creating socket
+2025-02-16 11:06:31,487 - client - INFO - Socket successfully created
+2025-02-16 11:06:31,487 - client - INFO - Connecting socket to port
+2025-02-16 11:06:31,487 - client - INFO - Socket connected successfully: 192.168.1.194:26100
+2025-02-16 11:06:31,487 - client - INFO - Receiving data from server
+2025-02-16 11:06:31,487 - client - INFO - Decoding received data
+2025-02-16 11:06:31,487 - client - INFO - Received data from server: {data}
+2025-02-16 11:06:31,487 - client - INFO - Encoding data
+2025-02-16 11:06:31,487 - client - INFO - Sending data to server: {msg}
+2025-02-16 11:06:33,253 - client - INFO - Encoding data
+2025-02-16 11:06:33,253 - client - CRITICAL - Uh oh, a problem has occured
+2025-02-16 11:06:33,253 - client - CRITICAL - 'int' object has no attribute 'encode'

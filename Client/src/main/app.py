@@ -13,7 +13,7 @@ class App():
 
         scriptDir = path.dirname(path.abspath(__file__))
         logging.basicConfig(filename=f"{scriptDir}\\..\\logs\\client-{socket.gethostname()}.log", 
-                            format='%(asctime)s - %(levelname)s - %(message)s')
+                            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         self.logger = logging.getLogger('client')
         self.logger.setLevel(logging.DEBUG)
         self.logger.debug("Init ran sucessfully")
@@ -88,13 +88,15 @@ class App():
 
         if data == "26101":
             msg = input("Enter the number of players ")
+            msg = "2"
             self.sendToServer(s, msg, buffSize)
             self.player1 = True
 
         self.endSocket(s)
 
     def getHand(self):
-        self.hand=[]
+        self.hand = []
+        self.discard = ""
 
         tcpPort = self.port
         tcpIp = '0.0.0.0'
@@ -115,6 +117,11 @@ class App():
             self.hand.append(data)
 
         self.logger.debug(f"Hand: {self.hand}")
+
+        data = self.reciveFromServer(c, buffSize)
+        self.discard = data
+
+        self.logger.debug(f"Discard: {self.discard}")
 
         self.logger.info("Disconnecting client connection")
         c.close()

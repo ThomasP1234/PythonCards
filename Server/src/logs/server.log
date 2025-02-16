@@ -23,3 +23,59 @@
 2025-02-16 09:01:59,633 - DEBUG - This server is PC-TOM [192.168.1.194]
 2025-02-16 09:01:59,633 - INFO - Program ran successfully
 2025-02-16 09:01:59,633 - INFO - Exited with error code 0
+2025-02-16 11:04:25,889 - server - DEBUG - Init ran sucessfully
+2025-02-16 11:04:25,889 - server - DEBUG - This server is PC-TOM [192.168.1.194]
+2025-02-16 11:04:25,889 - server - INFO - Program ran successfully
+2025-02-16 11:04:25,889 - server - INFO - Exited with error code 0
+2025-02-16 11:04:36,022 - server - DEBUG - Init ran sucessfully
+2025-02-16 11:04:36,022 - server - DEBUG - This server is PC-TOM [192.168.1.194]
+2025-02-16 11:04:36,022 - server - INFO - Program ran successfully
+2025-02-16 11:04:36,022 - server - INFO - Exited with error code 0
+2025-02-16 11:04:51,255 - server - DEBUG - Init ran sucessfully
+2025-02-16 11:04:51,270 - server - DEBUG - This server is PC-TOM [192.168.1.194]
+2025-02-16 11:04:51,270 - server - INFO - Program ran successfully
+2025-02-16 11:04:51,270 - server - INFO - Exited with error code 0
+2025-02-16 11:05:34,820 - server - DEBUG - Init ran sucessfully
+2025-02-16 11:05:34,820 - server - DEBUG - This server is PC-TOM [192.168.1.194]
+2025-02-16 11:05:34,820 - server - DEBUG - Beginning handshake with clients
+2025-02-16 11:05:34,820 - server - INFO - Creating socket
+2025-02-16 11:05:34,820 - server - INFO - Socket successfully created
+2025-02-16 11:05:34,820 - server - INFO - Socket is binded to: 0.0.0.0:26100
+2025-02-16 11:05:34,820 - server - INFO - Socket is listening
+2025-02-16 11:05:37,303 - server - INFO - Connection address: ('192.168.1.194', 64423)
+2025-02-16 11:05:37,303 - server - INFO - Encoding data
+2025-02-16 11:05:37,303 - server - INFO - Sending data to client: {msg}
+2025-02-16 11:05:37,303 - server - INFO - Verifying data send to client
+2025-02-16 11:05:37,303 - server - INFO - Receiving data from client
+2025-02-16 11:05:37,303 - server - INFO - Decoding received data
+2025-02-16 11:05:37,303 - server - INFO - Received data from client: {data}
+2025-02-16 11:05:37,303 - server - INFO - Data sent successfully to client
+2025-02-16 11:05:37,303 - server - INFO - Receiving data from client
+2025-02-16 11:05:39,758 - server - INFO - Decoding received data
+2025-02-16 11:05:39,758 - server - INFO - Received data from client: {data}
+2025-02-16 11:05:39,758 - server - INFO - Encoding data
+2025-02-16 11:05:39,758 - server - INFO - Sending data to client: {msg}
+2025-02-16 11:05:39,758 - server - CRITICAL - Uh oh, a problem has occured
+2025-02-16 11:05:39,758 - server - CRITICAL - invalid literal for int() with base 10: ''
+2025-02-16 11:06:28,186 - server - DEBUG - Init ran sucessfully
+2025-02-16 11:06:28,186 - server - DEBUG - This server is PC-TOM [192.168.1.194]
+2025-02-16 11:06:28,186 - server - DEBUG - Beginning handshake with clients
+2025-02-16 11:06:28,186 - server - INFO - Creating socket
+2025-02-16 11:06:28,186 - server - INFO - Socket successfully created
+2025-02-16 11:06:28,186 - server - INFO - Socket is binded to: 0.0.0.0:26100
+2025-02-16 11:06:28,186 - server - INFO - Socket is listening
+2025-02-16 11:06:31,487 - server - INFO - Connection address: ('192.168.1.194', 64447)
+2025-02-16 11:06:31,487 - server - INFO - Encoding data
+2025-02-16 11:06:31,487 - server - INFO - Sending data to client: 26101
+2025-02-16 11:06:31,487 - server - INFO - Verifying data send to client
+2025-02-16 11:06:31,487 - server - INFO - Receiving data from client
+2025-02-16 11:06:31,487 - server - INFO - Decoding received data
+2025-02-16 11:06:31,487 - server - INFO - Received data from client: {data}
+2025-02-16 11:06:31,487 - server - INFO - Data sent successfully to client
+2025-02-16 11:06:31,487 - server - INFO - Receiving data from client
+2025-02-16 11:06:33,253 - server - INFO - Decoding received data
+2025-02-16 11:06:33,253 - server - INFO - Received data from client: {data}
+2025-02-16 11:06:33,253 - server - INFO - Encoding data
+2025-02-16 11:06:33,253 - server - INFO - Sending data to client: 
+2025-02-16 11:06:33,253 - server - CRITICAL - Uh oh, a problem has occured
+2025-02-16 11:06:33,269 - server - CRITICAL - invalid literal for int() with base 10: ''

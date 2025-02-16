@@ -12,7 +12,8 @@ class Server():
         self.init_buffSize = 30
         
         scriptDir = path.dirname(path.abspath(__file__))
-        logging.basicConfig(filename=f"{scriptDir}\\..\\logs\\server.log", format='%(asctime)s - %(levelname)s - %(message)s')
+        logging.basicConfig(filename=f"{scriptDir}\\..\\logs\\server.log", 
+                            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         self.logger = logging.getLogger('server')
         self.logger.setLevel(logging.DEBUG)
         self.logger.debug("Init ran sucessfully")
@@ -38,7 +39,7 @@ class Server():
         self.logger.info("Encoding data")
         e_msg = msg.encode('utf-8')
 
-        self.logger.info("Sending data to client: {msg}")
+        self.logger.info(f"Sending data to client: {msg}")
         c.send(e_msg)
 
         if isSend:
@@ -49,8 +50,8 @@ class Server():
         data = self.reciveFromClient(c, buffSize, False)
         if data != msg:
             self.logger.critical("Mismatch in data sent back")
-            self.logger.critical("Sent: {msg}")
-            self.logger.critical("Recived {data}")
+            self.logger.critical(f"Sent: {msg}")
+            self.logger.critical(f"Recived {data}")
             raise IOError
         else:
             self.logger.info("Data sent successfully to client")
@@ -131,6 +132,7 @@ class Server():
         return deck
     
     def sendPlayerHand(self):
+        playerCounter = 1
         for player in self.players:
             tcpIp = player[0]
             tcpPort = player[1]
@@ -148,7 +150,13 @@ class Server():
                 self.sendToClient(s, msg, buffSize)
                 self.logger.debug(f"Card: {msg}")
 
+            msg = self.deck[7*(len(self.players)-playerCounter)]
+            self.sendToClient(s, msg, buffSize)
+            self.logger.debug(f"Discard Card: {msg}")
+
             self.endSocket(s)
+
+            playerCounter += 1 
 
     def turn(self):
         self.logger.debug(f"Main Deck: {self.deck}")
@@ -250,7 +258,7 @@ class Server():
 if __name__ == "__main__":
     server = Server()
     try:
-        # server.run()
+        server.run()
         server.logger.info('Program ran successfully')
         server.logger.info('Exited with error code 0')
         exit(0)
