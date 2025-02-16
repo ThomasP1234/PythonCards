@@ -1,0 +1,254 @@
+2025-02-16 08:51:36,185 - DEBUG - Init ran sucessfully
+2025-02-16 08:51:36,185 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 08:51:36,185 - INFO - Creating socket
+2025-02-16 08:51:36,185 - INFO - Socket successfully created
+2025-02-16 08:51:36,185 - DEBUG - Init ran sucessfully
+2025-02-16 08:51:36,185 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 08:51:36,185 - INFO - Disconnecting socket
+2025-02-16 08:51:36,185 - INFO - Socket disconnected successfully
+2025-02-16 08:51:36,185 - DEBUG - Init ran sucessfully
+2025-02-16 08:51:36,199 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 08:51:36,199 - INFO - Socket is binded to: 127.0.0.1:26100
+2025-02-16 09:05:49,558 - DEBUG - Init ran sucessfully
+2025-02-16 09:05:49,558 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:05:49,558 - INFO - Encoding data
+2025-02-16 09:05:49,558 - INFO - Sending data to server: {msg}
+2025-02-16 09:05:49,558 - INFO - Verifying data send to server
+2025-02-16 09:05:49,558 - INFO - Receiving data from server
+2025-02-16 09:05:49,558 - INFO - Decoding received data
+2025-02-16 09:05:49,558 - INFO - Received data from server: {data}
+2025-02-16 09:05:49,558 - CRITICAL - Mismatch in data sent back
+2025-02-16 09:05:49,558 - CRITICAL - Sent: {msg}
+2025-02-16 09:05:49,558 - CRITICAL - Recived {data}
+2025-02-16 09:06:27,807 - DEBUG - Init ran sucessfully
+2025-02-16 09:06:27,807 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:06:27,807 - INFO - Encoding data
+2025-02-16 09:06:27,807 - INFO - Sending data to server: {msg}
+2025-02-16 09:06:48,490 - DEBUG - Init ran sucessfully
+2025-02-16 09:06:48,509 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:06:48,509 - INFO - Encoding data
+2025-02-16 09:06:48,509 - INFO - Sending data to server: {msg}
+2025-02-16 09:11:34,832 - DEBUG - Init ran sucessfully
+2025-02-16 09:11:34,832 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:11:34,832 - INFO - Verifying data send to server
+2025-02-16 09:11:34,832 - CRITICAL - Mismatch in data sent back
+2025-02-16 09:11:34,832 - CRITICAL - Sent: {msg}
+2025-02-16 09:11:34,832 - CRITICAL - Recived {data}
+2025-02-16 09:13:21,712 - DEBUG - Init ran sucessfully
+2025-02-16 09:13:21,712 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:13:21,712 - INFO - Verifying data send to server
+2025-02-16 09:13:21,712 - CRITICAL - Mismatch in data sent back
+2025-02-16 09:13:21,712 - CRITICAL - Sent: {msg}
+2025-02-16 09:13:21,712 - CRITICAL - Recived {data}
+2025-02-16 09:13:51,511 - DEBUG - Init ran sucessfully
+2025-02-16 09:13:51,528 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:13:51,528 - INFO - Verifying data send to server
+2025-02-16 09:13:51,528 - CRITICAL - Mismatch in data sent back
+2025-02-16 09:13:51,528 - CRITICAL - Sent: Test
+2025-02-16 09:13:51,529 - CRITICAL - Recived <MagicMock name='reciveFromServer()' id='2216642534704'>
+2025-02-16 09:15:48,025 - DEBUG - Init ran sucessfully
+2025-02-16 09:15:48,043 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:15:48,043 - INFO - Verifying data send to server
+2025-02-16 09:15:48,043 - CRITICAL - Mismatch in data sent back
+2025-02-16 09:15:48,043 - CRITICAL - Sent: Test
+2025-02-16 09:15:48,043 - CRITICAL - Recived <MagicMock name='reciveFromServer()' id='1740720823408'>
+2025-02-16 09:16:04,958 - DEBUG - Init ran sucessfully
+2025-02-16 09:16:04,978 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:16:04,978 - INFO - Verifying data send to server
+2025-02-16 09:16:04,978 - CRITICAL - Mismatch in data sent back
+2025-02-16 09:16:04,978 - CRITICAL - Sent: Test
+2025-02-16 09:16:04,978 - CRITICAL - Recived <MagicMock name='reciveFromServer()' id='2355279109040'>
+2025-02-16 09:16:39,141 - DEBUG - Init ran sucessfully
+2025-02-16 09:16:39,141 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:16:39,141 - INFO - Verifying data send to server
+2025-02-16 09:16:39,141 - CRITICAL - Mismatch in data sent back
+2025-02-16 09:16:39,141 - CRITICAL - Sent: Test
+2025-02-16 09:16:39,141 - CRITICAL - Recived <MagicMock name='reciveFromServer()' id='2366511111520'>
+2025-02-16 09:28:44,535 - DEBUG - Init ran sucessfully
+2025-02-16 09:28:44,535 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:28:44,535 - INFO - Verifying data send to server
+2025-02-16 09:28:44,535 - CRITICAL - Mismatch in data sent back
+2025-02-16 09:28:44,535 - CRITICAL - Sent: Test
+2025-02-16 09:28:44,535 - CRITICAL - Recived <MagicMock name='reciveFromServer()' id='2392865889536'>
+2025-02-16 09:29:41,617 - DEBUG - Init ran sucessfully
+2025-02-16 09:29:41,617 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:29:41,617 - INFO - Verifying data send to server
+2025-02-16 09:29:41,617 - CRITICAL - Mismatch in data sent back
+2025-02-16 09:29:41,617 - CRITICAL - Sent: Test
+2025-02-16 09:29:41,617 - CRITICAL - Recived <MagicMock name='reciveFromServer()' id='2102191242080'>
+2025-02-16 09:33:11,165 - DEBUG - Init ran sucessfully
+2025-02-16 09:33:11,177 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:33:11,177 - INFO - Verifying data send to server
+2025-02-16 09:33:11,177 - INFO - Data sent successfully to server
+2025-02-16 09:38:19,803 - DEBUG - Init ran sucessfully
+2025-02-16 09:38:19,821 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:38:19,821 - INFO - Verifying data send to server
+2025-02-16 09:38:19,821 - INFO - Data sent successfully to server
+2025-02-16 09:45:01,394 - DEBUG - Init ran sucessfully
+2025-02-16 09:45:01,394 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:45:01,394 - INFO - Creating socket
+2025-02-16 09:45:01,394 - INFO - Socket successfully created
+2025-02-16 09:45:01,394 - DEBUG - Init ran sucessfully
+2025-02-16 09:45:01,394 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:45:01,394 - INFO - Disconnecting socket
+2025-02-16 09:45:01,394 - INFO - Socket disconnected successfully
+2025-02-16 09:45:01,394 - DEBUG - Init ran sucessfully
+2025-02-16 09:45:01,394 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:45:01,394 - INFO - Encoding data
+2025-02-16 09:45:01,394 - INFO - Sending data to server: {msg}
+2025-02-16 09:45:01,394 - DEBUG - Init ran sucessfully
+2025-02-16 09:45:01,394 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:45:01,394 - INFO - Socket is binded to: 127.0.0.1:26100
+2025-02-16 09:52:02,501 - DEBUG - Init ran sucessfully
+2025-02-16 09:52:02,515 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:52:02,515 - INFO - Verifying data send to server
+2025-02-16 09:52:02,515 - INFO - Data sent successfully to server
+2025-02-16 09:52:15,302 - DEBUG - Init ran sucessfully
+2025-02-16 09:52:15,317 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:52:15,317 - INFO - Verifying data send to server
+2025-02-16 09:52:15,317 - INFO - Data sent successfully to server
+2025-02-16 09:52:33,462 - DEBUG - Init ran sucessfully
+2025-02-16 09:52:33,462 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:52:33,462 - INFO - Creating socket
+2025-02-16 09:52:33,462 - INFO - Socket successfully created
+2025-02-16 09:52:33,462 - DEBUG - Init ran sucessfully
+2025-02-16 09:52:33,462 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:52:33,462 - INFO - Disconnecting socket
+2025-02-16 09:52:33,462 - INFO - Socket disconnected successfully
+2025-02-16 09:52:33,462 - DEBUG - Init ran sucessfully
+2025-02-16 09:52:33,462 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:52:33,462 - INFO - Encoding data
+2025-02-16 09:52:33,462 - INFO - Sending data to server: {msg}
+2025-02-16 09:52:33,462 - DEBUG - Init ran sucessfully
+2025-02-16 09:52:33,462 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:52:33,462 - INFO - Socket is binded to: 127.0.0.1:26100
+2025-02-16 09:52:33,462 - DEBUG - Init ran sucessfully
+2025-02-16 09:52:33,462 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:52:33,462 - INFO - Verifying data send to server
+2025-02-16 09:52:33,462 - INFO - Data sent successfully to server
+2025-02-16 09:55:33,759 - DEBUG - Init ran sucessfully
+2025-02-16 09:55:33,776 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:55:33,776 - INFO - Encoding data
+2025-02-16 09:55:33,776 - INFO - Sending data to server: {msg}
+2025-02-16 09:55:33,776 - INFO - Encoding data
+2025-02-16 09:55:33,776 - INFO - Sending data to server: {msg}
+2025-02-16 09:58:13,185 - DEBUG - Init ran sucessfully
+2025-02-16 09:58:13,185 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:58:13,185 - INFO - Encoding data
+2025-02-16 09:58:13,185 - INFO - Sending data to server: {msg}
+2025-02-16 09:58:14,536 - DEBUG - Init ran sucessfully
+2025-02-16 09:58:14,552 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:58:14,553 - INFO - Encoding data
+2025-02-16 09:58:14,553 - INFO - Sending data to server: {msg}
+2025-02-16 09:58:18,701 - DEBUG - Init ran sucessfully
+2025-02-16 09:58:18,721 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:58:18,721 - INFO - Creating socket
+2025-02-16 09:58:18,721 - INFO - Socket successfully created
+2025-02-16 09:58:18,722 - DEBUG - Init ran sucessfully
+2025-02-16 09:58:18,722 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:58:18,722 - INFO - Disconnecting socket
+2025-02-16 09:58:18,722 - INFO - Socket disconnected successfully
+2025-02-16 09:58:18,723 - DEBUG - Init ran sucessfully
+2025-02-16 09:58:18,723 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:58:18,723 - INFO - Encoding data
+2025-02-16 09:58:18,723 - INFO - Sending data to server: {msg}
+2025-02-16 09:58:18,724 - DEBUG - Init ran sucessfully
+2025-02-16 09:58:18,724 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:58:18,724 - INFO - Encoding data
+2025-02-16 09:58:18,724 - INFO - Sending data to server: {msg}
+2025-02-16 09:58:18,724 - DEBUG - Init ran sucessfully
+2025-02-16 09:58:18,724 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:58:18,724 - INFO - Socket is binded to: 127.0.0.1:26100
+2025-02-16 09:58:18,724 - DEBUG - Init ran sucessfully
+2025-02-16 09:58:18,724 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:58:18,724 - INFO - Verifying data send to server
+2025-02-16 09:58:18,724 - INFO - Data sent successfully to server
+2025-02-16 09:59:36,916 - DEBUG - Init ran sucessfully
+2025-02-16 09:59:36,932 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:59:36,933 - INFO - Encoding data
+2025-02-16 09:59:36,933 - INFO - Sending data to server: {msg}
+2025-02-16 09:59:37,849 - DEBUG - Init ran sucessfully
+2025-02-16 09:59:37,869 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:59:37,870 - INFO - Encoding data
+2025-02-16 09:59:37,870 - INFO - Sending data to server: {msg}
+2025-02-16 09:59:51,865 - DEBUG - Init ran sucessfully
+2025-02-16 09:59:51,865 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:59:51,865 - INFO - Creating socket
+2025-02-16 09:59:51,865 - INFO - Socket successfully created
+2025-02-16 09:59:51,865 - DEBUG - Init ran sucessfully
+2025-02-16 09:59:51,865 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:59:51,865 - INFO - Disconnecting socket
+2025-02-16 09:59:51,865 - INFO - Socket disconnected successfully
+2025-02-16 09:59:51,865 - DEBUG - Init ran sucessfully
+2025-02-16 09:59:51,865 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:59:51,865 - INFO - Encoding data
+2025-02-16 09:59:51,865 - INFO - Sending data to server: {msg}
+2025-02-16 09:59:51,865 - DEBUG - Init ran sucessfully
+2025-02-16 09:59:51,865 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:59:51,865 - INFO - Encoding data
+2025-02-16 09:59:51,865 - INFO - Sending data to server: {msg}
+2025-02-16 09:59:51,865 - DEBUG - Init ran sucessfully
+2025-02-16 09:59:51,865 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:59:51,865 - INFO - Socket is binded to: 127.0.0.1:26100
+2025-02-16 09:59:51,865 - DEBUG - Init ran sucessfully
+2025-02-16 09:59:51,865 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 09:59:51,865 - INFO - Verifying data send to server
+2025-02-16 09:59:51,865 - INFO - Data sent successfully to server
+2025-02-16 10:01:03,863 - DEBUG - Init ran sucessfully
+2025-02-16 10:01:03,882 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:01:03,882 - INFO - Encoding data
+2025-02-16 10:01:03,882 - INFO - Sending data to server: {msg}
+2025-02-16 10:02:31,879 - DEBUG - Init ran sucessfully
+2025-02-16 10:02:31,879 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:02:54,660 - DEBUG - Init ran sucessfully
+2025-02-16 10:02:54,660 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:02:54,660 - INFO - Receiving data from server
+2025-02-16 10:02:54,660 - INFO - Decoding received data
+2025-02-16 10:02:54,660 - INFO - Received data from server: {data}
+2025-02-16 10:03:47,426 - DEBUG - Init ran sucessfully
+2025-02-16 10:03:47,441 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:03:47,441 - INFO - Receiving data from server
+2025-02-16 10:03:47,441 - INFO - Decoding received data
+2025-02-16 10:03:47,441 - INFO - Received data from server: {data}
+2025-02-16 10:05:03,243 - DEBUG - Init ran sucessfully
+2025-02-16 10:05:03,243 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:05:03,243 - INFO - Receiving data from server
+2025-02-16 10:05:03,243 - INFO - Decoding received data
+2025-02-16 10:05:18,193 - DEBUG - Init ran sucessfully
+2025-02-16 10:05:18,193 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:05:18,193 - INFO - Receiving data from server
+2025-02-16 10:05:18,193 - INFO - Decoding received data
+2025-02-16 10:05:18,193 - INFO - Received data from server: {data}
+2025-02-16 10:05:23,006 - DEBUG - Init ran sucessfully
+2025-02-16 10:05:23,023 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:05:23,023 - INFO - Creating socket
+2025-02-16 10:05:23,023 - INFO - Socket successfully created
+2025-02-16 10:05:23,023 - DEBUG - Init ran sucessfully
+2025-02-16 10:05:23,023 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:05:23,023 - INFO - Disconnecting socket
+2025-02-16 10:05:23,023 - INFO - Socket disconnected successfully
+2025-02-16 10:05:23,023 - DEBUG - Init ran sucessfully
+2025-02-16 10:05:23,023 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:05:23,023 - INFO - Receiving data from server
+2025-02-16 10:05:23,023 - INFO - Decoding received data
+2025-02-16 10:05:23,023 - INFO - Received data from server: {data}
+2025-02-16 10:05:23,023 - DEBUG - Init ran sucessfully
+2025-02-16 10:05:23,023 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:05:23,023 - INFO - Encoding data
+2025-02-16 10:05:23,023 - INFO - Sending data to server: {msg}
+2025-02-16 10:05:23,023 - DEBUG - Init ran sucessfully
+2025-02-16 10:05:23,023 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:05:23,023 - INFO - Encoding data
+2025-02-16 10:05:23,023 - INFO - Sending data to server: {msg}
+2025-02-16 10:05:23,023 - DEBUG - Init ran sucessfully
+2025-02-16 10:05:23,023 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:05:23,023 - INFO - Socket is binded to: 127.0.0.1:26100
+2025-02-16 10:05:23,023 - DEBUG - Init ran sucessfully
+2025-02-16 10:05:23,023 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:05:23,023 - INFO - Verifying data send to server
+2025-02-16 10:05:23,023 - INFO - Data sent successfully to server
+2025-02-16 10:06:03,656 - DEBUG - Init ran sucessfully
+2025-02-16 10:06:03,656 - DEBUG - This client is PC-TOM [192.168.1.194]
+2025-02-16 10:06:03,656 - INFO - Receiving data from server
+2025-02-16 10:06:03,656 - INFO - Decoding received data
+2025-02-16 10:06:03,656 - INFO - Received data from server: {data}

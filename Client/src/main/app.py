@@ -1,5 +1,5 @@
-from os import path
 import socket
+from os import path
 import logging
 
 class App():
@@ -48,8 +48,8 @@ class App():
         data = self.reciveFromServer(c, buffSize, False)
         if data != msg:
             self.logger.critical("Mismatch in data sent back")
-            self.logger.critical("Sent: {msg}")
-            self.logger.critical("Recived {data}")
+            self.logger.critical(f"Sent: {msg}")
+            self.logger.critical(f"Recived {data}")
             raise IOError
         else:
             self.logger.info("Data sent successfully to server")
@@ -186,4 +186,13 @@ class App():
 
 if __name__ == "__main__":
     application = App()
-    application.run()
+    try:
+        application.run()
+        application.logger.info('Program ran successfully')
+        application.logger.info('Exited with error code 0')
+        exit(0)
+    except Exception as e:
+        application.logger.fatal('Uh oh, a problem has occured')
+        if e != "":
+            application.logger.fatal(e)
+        raise SystemExit

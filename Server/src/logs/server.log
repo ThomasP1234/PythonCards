@@ -1,0 +1,25 @@
+2025-02-16 08:52:32,899 - DEBUG - Init ran sucessfully
+2025-02-16 08:52:32,899 - DEBUG - This server is PC-TOM [192.168.1.194]
+2025-02-16 08:52:32,899 - DEBUG - Beginning handshake with clients
+2025-02-16 08:52:32,899 - INFO - Creating socket
+2025-02-16 08:52:32,899 - INFO - Socket successfully created
+2025-02-16 08:52:32,899 - INFO - Socket is binded to: 0.0.0.0:26100
+2025-02-16 08:52:32,899 - INFO - Socket is listening
+2025-02-16 08:58:29,039 - DEBUG - Init ran sucessfully
+2025-02-16 08:58:29,039 - DEBUG - This server is PC-TOM [192.168.1.194]
+2025-02-16 08:58:29,039 - CRITICAL - Uh oh, a problem has occured
+2025-02-16 08:58:29,039 - CRITICAL - 
+2025-02-16 08:58:29,039 - INFO - Program ran successfully
+2025-02-16 08:58:29,039 - INFO - Exited with error code 0
+2025-02-16 08:59:09,670 - DEBUG - Init ran sucessfully
+2025-02-16 08:59:09,670 - DEBUG - This server is PC-TOM [192.168.1.194]
+2025-02-16 08:59:09,670 - CRITICAL - Uh oh, a problem has occured
+2025-02-16 08:59:09,670 - CRITICAL - 
+2025-02-16 09:01:20,961 - DEBUG - Init ran sucessfully
+2025-02-16 09:01:20,961 - DEBUG - This server is PC-TOM [192.168.1.194]
+2025-02-16 09:01:20,961 - CRITICAL - Uh oh, a problem has occured
+2025-02-16 09:01:20,961 - CRITICAL - 
+2025-02-16 09:01:59,631 - DEBUG - Init ran sucessfully
+2025-02-16 09:01:59,633 - DEBUG - This server is PC-TOM [192.168.1.194]
+2025-02-16 09:01:59,633 - INFO - Program ran successfully
+2025-02-16 09:01:59,633 - INFO - Exited with error code 0

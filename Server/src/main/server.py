@@ -1,5 +1,6 @@
 import socket
 import random
+from os import path
 import logging
 
 class Server():
@@ -7,7 +8,9 @@ class Server():
         self.init_tcpIp = '0.0.0.0'
         self.init_tcpPort = 26100
         self.init_buffSize = 30
-        logging.basicConfig(filename="server.log", format='%(asctime)s - %(levelname)s - %(message)s')
+        
+        scriptDir = path.dirname(path.abspath(__file__))
+        logging.basicConfig(filename=f"{scriptDir}\\..\\logs\\server.log", format='%(asctime)s - %(levelname)s - %(message)s')
         self.logger = logging.getLogger('server')
         self.logger.setLevel(logging.DEBUG)
         self.logger.debug("Init ran sucessfully")
@@ -244,4 +247,13 @@ class Server():
 
 if __name__ == "__main__":
     server = Server()
-    server.run()
+    try:
+        # server.run()
+        server.logger.info('Program ran successfully')
+        server.logger.info('Exited with error code 0')
+        exit(0)
+    except Exception as e:
+        server.logger.fatal('Uh oh, a problem has occured')
+        if e != "":
+            server.logger.fatal(e)
+        raise SystemExit
