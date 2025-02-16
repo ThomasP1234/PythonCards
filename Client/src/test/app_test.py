@@ -1,3 +1,5 @@
+# Author: Thomas Preston
+
 import sys
 import os
 

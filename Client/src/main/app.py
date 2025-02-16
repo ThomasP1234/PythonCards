@@ -1,3 +1,5 @@
+# Author: Thomas Preston
+
 import socket
 from os import path
 import logging

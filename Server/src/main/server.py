@@ -1,3 +1,5 @@
+# Author: Thomas Preston
+
 import socket
 import random
 from os import path
@@ -119,9 +121,9 @@ class Server():
 
     def generateDeck(self):
         deck=[]
-        for suit in ["spades", "clubs", "hearts", "diamonds"]:
+        for suit in ["Spade", "Club", "Heart", "Diamonds"]:
             suitList = list(range(2,11))
-            suitList.extend(["jack", "queen", "king", "ace"])
+            suitList.extend(["Jack", "Queen", "King", "Ace"])
             for card in suitList:
                 deck.append(suit+str(card))
 
