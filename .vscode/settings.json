@@ -1,0 +1,14 @@
+{
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "Client/src/test", "Server/src/test",
+        "-p",
+        "*_test.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true,
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "python.terminal.executeInFileDir": true,
+    "python.analysis.extraPaths": ["${workspaceFolder}"]
+}

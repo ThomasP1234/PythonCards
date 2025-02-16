@@ -1,3 +1,4 @@
+from os import path
 import socket
 import logging
 
@@ -7,7 +8,10 @@ class App():
         self.init_tcpPort = 26100
         self.init_buffSize = 30
         self.player1 = False
-        logging.basicConfig(filename=f"client-{socket.gethostname()}.log", format='%(asctime)s - %(levelname)s - %(message)s')
+
+        scriptDir = path.dirname(path.abspath(__file__))
+        logging.basicConfig(filename=f"{scriptDir}\\..\\logs\\client-{socket.gethostname()}.log", 
+                            format='%(asctime)s - %(levelname)s - %(message)s')
         self.logger = logging.getLogger('client')
         self.logger.setLevel(logging.DEBUG)
         self.logger.debug("Init ran sucessfully")

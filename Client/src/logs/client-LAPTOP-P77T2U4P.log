@@ -1,0 +1,49 @@
+2025-02-16 08:10:11,877 - DEBUG - Init ran sucessfully
+2025-02-16 08:10:11,908 - DEBUG - This client is LAPTOP-P77T2U4P [192.168.1.252]
+2025-02-16 08:10:11,908 - DEBUG - Beginning handshake with server
+2025-02-16 08:10:11,908 - INFO - Creating socket
+2025-02-16 08:10:11,908 - INFO - Socket successfully created
+2025-02-16 08:10:11,908 - INFO - Connecting socket to port
+2025-02-16 08:41:21,079 - DEBUG - Init ran sucessfully
+2025-02-16 08:41:21,079 - DEBUG - This client is LAPTOP-P77T2U4P [192.168.1.252]
+2025-02-16 08:41:21,079 - INFO - Creating socket
+2025-02-16 08:41:21,079 - INFO - Socket successfully created
+2025-02-16 08:41:26,016 - DEBUG - Init ran sucessfully
+2025-02-16 08:41:26,040 - DEBUG - This client is LAPTOP-P77T2U4P [192.168.1.252]
+2025-02-16 08:41:26,040 - INFO - Creating socket
+2025-02-16 08:41:26,040 - INFO - Socket successfully created
+2025-02-16 08:44:16,087 - DEBUG - Init ran sucessfully
+2025-02-16 08:44:16,087 - DEBUG - This client is LAPTOP-P77T2U4P [192.168.1.252]
+2025-02-16 08:44:16,087 - INFO - Creating socket
+2025-02-16 08:44:16,087 - INFO - Socket successfully created
+2025-02-16 08:44:16,087 - DEBUG - Init ran sucessfully
+2025-02-16 08:44:16,103 - DEBUG - This client is LAPTOP-P77T2U4P [192.168.1.252]
+2025-02-16 08:44:16,103 - INFO - Disconnecting socket
+2025-02-16 08:44:16,103 - INFO - Socket disconnected successfully
+2025-02-16 08:44:22,453 - DEBUG - Init ran sucessfully
+2025-02-16 08:44:22,468 - DEBUG - This client is LAPTOP-P77T2U4P [192.168.1.252]
+2025-02-16 08:44:22,468 - INFO - Creating socket
+2025-02-16 08:44:22,469 - INFO - Socket successfully created
+2025-02-16 08:44:22,471 - DEBUG - Init ran sucessfully
+2025-02-16 08:44:22,472 - DEBUG - This client is LAPTOP-P77T2U4P [192.168.1.252]
+2025-02-16 08:44:22,472 - INFO - Disconnecting socket
+2025-02-16 08:44:22,473 - INFO - Socket disconnected successfully
+2025-02-16 08:44:41,500 - DEBUG - Init ran sucessfully
+2025-02-16 08:44:41,521 - DEBUG - This client is LAPTOP-P77T2U4P [192.168.1.252]
+2025-02-16 08:44:41,521 - INFO - Creating socket
+2025-02-16 08:44:41,522 - INFO - Socket successfully created
+2025-02-16 08:44:41,522 - DEBUG - Init ran sucessfully
+2025-02-16 08:44:41,522 - DEBUG - This client is LAPTOP-P77T2U4P [192.168.1.252]
+2025-02-16 08:44:41,522 - INFO - Disconnecting socket
+2025-02-16 08:44:41,522 - INFO - Socket disconnected successfully
+2025-02-16 08:48:27,301 - DEBUG - Init ran sucessfully
+2025-02-16 08:48:27,319 - DEBUG - This client is LAPTOP-P77T2U4P [192.168.1.252]
+2025-02-16 08:48:27,319 - INFO - Creating socket
+2025-02-16 08:48:27,319 - INFO - Socket successfully created
+2025-02-16 08:48:27,322 - DEBUG - Init ran sucessfully
+2025-02-16 08:48:27,323 - DEBUG - This client is LAPTOP-P77T2U4P [192.168.1.252]
+2025-02-16 08:48:27,323 - INFO - Disconnecting socket
+2025-02-16 08:48:27,324 - INFO - Socket disconnected successfully
+2025-02-16 08:48:27,326 - DEBUG - Init ran sucessfully
+2025-02-16 08:48:27,328 - DEBUG - This client is LAPTOP-P77T2U4P [192.168.1.252]
+2025-02-16 08:48:27,328 - INFO - Socket is binded to: 127.0.0.1:26100
